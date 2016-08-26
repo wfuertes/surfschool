@@ -1,8 +1,21 @@
 class Api::UsersController < ApplicationController
-    respond_to :json
     
     def index
-        @users = [{:name => "Willian", :idade => 32}]
-        respond_with @users
+        respond_with User.all
     end
+
+    def create
+        if @user.present?
+            render nothing: true, status: :conflict
+        else
+            @user = User.new
+            @user.assign_attributes(@json['user'])
+            if @user.save
+                render json: @user
+            else
+                render nothing: true, status: :bad_request
+            end
+        end
+    end
+
 end
