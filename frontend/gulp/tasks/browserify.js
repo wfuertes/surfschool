@@ -15,11 +15,11 @@ var config = require('../config').browserify;
 var babelConfig = require('../config').babel;
 var babelify = require('babelify');
 
-gulp.task('browserify', function (callback) {
+gulp.task('browserify', (callback) => {
 
   var bundleQueue = config.bundleConfigs.length;
 
-  var browserifyThis = function (bundleConfig) {
+  var browserifyThis = (bundleConfig) => {
     var bundler = browserify({
       cache: {}, packageCache: {}, fullPaths: false,
       entries: bundleConfig.entries,
@@ -27,7 +27,7 @@ gulp.task('browserify', function (callback) {
       debug: config.debug
     });
 
-    var bundle = function () {
+    var bundle = () => {
       bundleLogger.start(bundleConfig.outputName);
 
       return bundler
@@ -45,7 +45,7 @@ gulp.task('browserify', function (callback) {
       bundler.on('update', bundle);
     }
 
-    var reportFinished = function () {
+    var reportFinished = () => {
       bundleLogger.end(bundleConfig.outputName);
 
       if (bundleQueue) {

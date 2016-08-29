@@ -3,7 +3,7 @@ var del = require('del');
 
 var config = require('../config').markup;
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   return del([
     config.dest + '/**/*'
   ]);

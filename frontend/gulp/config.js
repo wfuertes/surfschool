@@ -3,7 +3,6 @@ var dest = './dest',
   mui = './node_modules/material-ui/src';
 
 module.exports = {
-
   browserSync: {
     server: {
       baseDir: [dest, src]
@@ -16,6 +15,7 @@ module.exports = {
 
   markup: {
     src: src + "/markup/**",
+    less: src + '/styles/**',
     dest: dest
   },
 
