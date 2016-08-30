@@ -1,11 +1,14 @@
-var notify = require("gulp-notify");
+/* eslint strict: 0 */
+'use strict';
+
+const notify = require('gulp-notify');
 
 module.exports = () => {
-  var args = Array.prototype.slice.call(arguments);
+  const args = Array.prototype.slice.call(arguments);
 
   notify.onError({
-    title: "Compilation errors",
-    message: 'Error: <%= error.message %>',
+    title: 'Compilation errors',
+    message: 'Error: <%= error.message %>'
   }).apply(this, args);
 
   this.emit('end');

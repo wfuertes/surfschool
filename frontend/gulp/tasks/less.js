@@ -1,16 +1,16 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var path = require('path');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const path = require('path');
 
-var config = require('../config').markup;
+const config = require('../config').markup;
 
 gulp.task('less', () => {
-  var lessConf = {
+  const lessConf = {
     paths: [path.join(__dirname, 'less', 'includes')],
     compress: true
   };
 
-  return gulp.src(config.less + '/*.less')
+  return gulp.src(`${config.less}/*.less`)
     .pipe(less(lessConf))
     .pipe(gulp.dest(config.dest));
 });

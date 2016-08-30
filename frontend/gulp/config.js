@@ -1,6 +1,5 @@
-var dest = './dest',
-  src = './src',
-  mui = './node_modules/material-ui/src';
+const dest = './dest';
+const src = './src';
 
 module.exports = {
   browserSync: {
@@ -9,24 +8,24 @@ module.exports = {
     },
 
     files: [
-      dest + '/**'
+      `${dest}/**'`
     ]
   },
 
   markup: {
-    src: src + "/markup/**",
-    less: src + '/styles/**',
-    dest: dest
+    src: `${src}/markup/**`,
+    less: `${src}/styles/**`,
+    dest
   },
 
   browserify: {
     debug: true,
     bundleConfigs: [{
-      entries: src + '/scripts/app/app.jsx',
-      dest: dest + '/js',
+      entries: `${src}/scripts/app/app.jsx`,
+      dest: `${dest}/js`,
       outputName: 'app.js'
     }],
-    extensions: ['.jsx'],
+    extensions: ['.jsx']
   },
 
   babel: {

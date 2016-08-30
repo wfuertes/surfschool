@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var del = require('del');
+const gulp = require('gulp');
+const del = require('del');
 
-var config = require('../config').markup;
+const config = require('../config').markup;
 
-gulp.task('clean', () => {
-  return del([
-    config.dest + '/**/*'
-  ]);
-});
+gulp.task('clean', () =>
+  del([
+    `${config.dest}/**/*`
+  ])
+);

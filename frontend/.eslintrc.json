@@ -1,0 +1,33 @@
+{
+  "extends": "airbnb-base",
+  "settings": {
+    "react": {
+      "createClass": "createClass",
+      "pragma": "React"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      140
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "comma-dangle": [
+      "error",
+      "never"
+    ]
+  }
+}

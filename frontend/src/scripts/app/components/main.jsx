@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
-import {deepOrange500} from 'material-ui/styles/colors';
+import { deepOrange500 } from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -9,14 +9,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 const styles = {
   container: {
     textAlign: 'center',
-    paddingTop: 200,
-  },
+    paddingTop: 200
+  }
 };
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: deepOrange500,
-  },
+    accent1Color: deepOrange500
+  }
 });
 
 class Main extends Component {
@@ -27,19 +27,19 @@ class Main extends Component {
     this.handleTouchTap = this.handleTouchTap.bind(this);
 
     this.state = {
-      open: false,
+      open: false
     };
   }
 
   handleRequestClose() {
     this.setState({
-      open: false,
+      open: false
     });
   }
 
   handleTouchTap() {
     this.setState({
-      open: true,
+      open: true
     });
   }
 
