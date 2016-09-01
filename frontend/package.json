@@ -7,9 +7,10 @@
     "start": "gulp"
   },
   "dependencies": {
+    "material-ui": "^0.15.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "material-ui": "^0.15.4",
+    "react-router": "^2.7.0",
     "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "gulp-util": "^3.0.7",
     "pretty-hrtime": "^1.0.2",
     "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2",
     "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
