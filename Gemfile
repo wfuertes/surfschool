@@ -18,7 +18,7 @@ gem 'responders', '~> 2.0'
 
 gem 'active_model_serializers'
 
-gem 'mongoid', '~> 5.1.4'
+gem 'json'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

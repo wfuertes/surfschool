@@ -1,20 +1,19 @@
 class Api::UsersController < ApplicationController
+    skip_before_filter :verify_authenticity_token
     
     def index
         respond_with User.all
     end
 
     def create
-        if @user.present?
-            render nothing: true, status: :conflict
+        data = JSON.parse request.body.string
+
+        @user = User.new
+        @user.assign_attributes(data)
+        if @user.save
+            render json: @user
         else
-            @user = User.new
-            @user.assign_attributes(@json['user'])
-            if @user.save
-                render json: @user
-            else
-                render nothing: true, status: :bad_request
-            end
+            render nothing: true, status: :bad_request
         end
     end
 
