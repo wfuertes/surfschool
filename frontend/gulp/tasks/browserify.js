@@ -13,7 +13,7 @@ const browserify = require('browserify');
 const watchify = require('watchify');
 const bundleLogger = require('../util/bundleLogger');
 const gulp = require('gulp');
-const handleErrors = require('../util/handleErrors');
+const gutil = require('gulp-util');
 const source = require('vinyl-source-stream');
 const config = require('../config').browserify;
 const babelConfig = require('../config').babel;
@@ -47,7 +47,10 @@ gulp.task('browserify', (callback) => {
 
       return bundler
         .bundle()
-        .on('error', handleErrors)
+        .on('error', (err) => {
+          gutil.log(gutil.colors.red('Browserify compile error: '), err.message);
+          gutil.beep();
+        })
         .pipe(source(bundleConfig.outputName))
         .pipe(gulp.dest(bundleConfig.dest))
         .on('end', reportFinished);
