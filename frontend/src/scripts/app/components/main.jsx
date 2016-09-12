@@ -65,6 +65,7 @@ class Main extends Component {
 
           <ul role="nav">
             <li><Link to="/about">About</Link></li>
+            <li><Link to="/users">Users</Link></li>
           </ul>
         </div>
       </MuiThemeProvider>

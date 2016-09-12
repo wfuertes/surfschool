@@ -11,6 +11,7 @@ class About extends Component {
     return 'Hello';
   }
 
+  /* eslint no-undef:0 */
   render() {
     return (
       <div>About: This is a simple react-route page.

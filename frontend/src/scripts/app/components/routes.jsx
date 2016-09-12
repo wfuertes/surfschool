@@ -4,7 +4,8 @@ import { Router, Route, hashHistory } from 'react-router';
 
 /* eslint import/no-unresolved: 0 */
 import Main from './main';
-import About from '../modules/about/about';
+import About from '../containers/about/about';
+import Users from '../containers/users/users';
 
 class Routes extends Component {
   render() {
@@ -12,6 +13,7 @@ class Routes extends Component {
       <Router history={hashHistory}>
         <Route path="/" component={Main}/>
         <Route path="/about" component={About}/>
+        <Route path="/users" component={Users}/>
       </Router>
     );
   }
