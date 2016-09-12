@@ -13,7 +13,7 @@ module.exports = {
   },
 
   markup: {
-    src: `${src}/markup/**`,
+    src: `${src}/index.html`,
     less: `${src}/styles/**`,
     dest
   },
@@ -21,7 +21,7 @@ module.exports = {
   browserify: {
     debug: true,
     bundleConfigs: [{
-      entries: `${src}/scripts/app/app.jsx`,
+      entries: `${src}/index.jsx`,
       dest: `${dest}/js`,
       outputName: 'app.js'
     }],
