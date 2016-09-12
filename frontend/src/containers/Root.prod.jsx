@@ -5,12 +5,17 @@ import { Provider } from 'react-redux';
 
 import routes from '../routes';
 
+import Main from './Main';
+
 export default class Root extends Component {
   render() {
     const { store, history } = this.props;
     return (
       <Provider store={store}>
-        <Router history={history} routes={routes} />
+        <div>
+          <Main />
+          <Router history={history} routes={routes} />
+        </div>
       </Provider>
     );
   }

@@ -15,6 +15,7 @@ module.exports = {
   markup: {
     src: `${src}/index.html`,
     less: `${src}/styles/**`,
+    imgs: `${src}/img/**`,
     dest
   },
 

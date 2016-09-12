@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 
 import routes from '../routes';
+
+import Main from './Main';
 import DevTools from './DevTools';
 
 export default class Root extends Component {
@@ -12,6 +14,7 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <div>
+          <Main />
           <Router history={history} routes={routes} />
           <DevTools />
         </div>
