@@ -7,9 +7,11 @@ import { Provider } from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 /* eslint import/no-unresolved: 0 */
-import Routes from './components/routes';
+// import Routes from './components/routes';
 
 import reducers from './reducers';
+
+import Users from './containers/users/users';
 
 const store = createStore(reducers);
 
@@ -20,7 +22,7 @@ injectTapEventPlugin();
 function render() {
   ReactDOM.render(
     <Provider store={store}>
-      <Routes />
+      <Users/>
     </Provider>, document.getElementById('app'));
 }
 

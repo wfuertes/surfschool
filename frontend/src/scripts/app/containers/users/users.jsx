@@ -33,11 +33,12 @@ Users.propTypes = {
 };
 
 /* eslint no-console: 0 */
+/* eslint no-unused-vars: 0 */
 function mapStateToProps(state, ownProps) {
-  const name = ownProps.params.name;
+  // const name = ownProps.params.name;
 
   return {
-    name
+    // name
   };
 }
 
