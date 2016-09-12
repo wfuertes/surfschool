@@ -1,3 +1,5 @@
+/* eslint no-case-declarations: 0 */
+
 import merge from 'lodash/merge';
 import union from 'lodash/union';
 
@@ -46,7 +48,6 @@ export default function paginate({ types, mapActionToKey }) {
     }
   }
 
-  /* eslint no-case-declarations: 0 */
   return function updatePaginationByKey(state = {}, action) {
     switch (action.type) {
       case requestType:

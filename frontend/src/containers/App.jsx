@@ -1,4 +1,5 @@
 /* eslint import/no-unresolved: 0 */
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';

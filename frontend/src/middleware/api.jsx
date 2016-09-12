@@ -1,3 +1,5 @@
+/* eslint no-undef: 0 */
+
 import 'isomorphic-fetch';
 import { camelizeKeys } from 'humps';
 import { Schema, arrayOf, normalize } from 'normalizr';
@@ -24,7 +26,6 @@ const API_ROOT = 'https://api.github.com/';
 function callApi(endpoint, schema) {
   const fullUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint;
 
-  /* eslint no-undef: 0 */
   return fetch(fullUrl)
     .then(response =>
       response.json().then(json => ({ json, response }))
@@ -55,7 +56,6 @@ function callApi(endpoint, schema) {
 // doesn't contain any. For example, "someuser" could result in "SomeUser"
 // leading to a frozen UI as it wouldn't find "someuser" in the entities.
 // That's why we're forcing lower cases down there.
-
 const userSchema = new Schema('users', {
   idAttribute: user => user.login.toLowerCase()
 });

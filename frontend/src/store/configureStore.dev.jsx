@@ -1,4 +1,5 @@
 /* eslint import/no-unresolved: 0, global-require: 0, import/no-extraneous-dependencies: 0 */
+
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';

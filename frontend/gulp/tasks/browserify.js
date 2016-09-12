@@ -7,6 +7,7 @@ See browserify.bundleConfigs in gulp/config.js
 */
 
 /* eslint strict: 0 */
+
 'use strict';
 
 const browserify = require('browserify');

@@ -1,4 +1,5 @@
 /* eslint import/no-unresolved: 0 */
+
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import api from '../middleware/api';

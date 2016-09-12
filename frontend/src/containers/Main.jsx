@@ -1,4 +1,5 @@
 /* eslint import/no-unresolved: 0 */
+
 import React, { Component } from 'react';
 
 import Dialog from 'material-ui/Dialog';
