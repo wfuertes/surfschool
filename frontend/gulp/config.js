@@ -6,7 +6,10 @@ module.exports = {
     server: {
       baseDir: [dest, src]
     },
-
+    port: 3005,
+    ui: {
+      port: 3010
+    },
     files: [
       `${dest}/**'`
     ]
