@@ -30,6 +30,21 @@ export const Schemas = {
   REPO_ARRAY: arrayOf(repoSchema)
 };
 
+// Extracts the next page URL from Github API response.
+function getNextPageUrl(response) {
+  const link = response.headers.get('link');
+  if (!link) {
+    return null;
+  }
+
+  const nextLink = link.split(',').find(s => s.indexOf('rel="next"') > -1);
+  if (!nextLink) {
+    return null;
+  }
+
+  return nextLink.split(';')[0].slice(1, -1);
+}
+
 // Fetches an API response and normalizes the result JSON according to schema.
 // This makes every API response have the same shape, regardless of how nested it was.
 function callApi(endpoint, schema) {
@@ -52,22 +67,6 @@ function callApi(endpoint, schema) {
       );
     });
 }
-
-// Extracts the next page URL from Github API response.
-function getNextPageUrl(response) {
-  const link = response.headers.get('link');
-  if (!link) {
-    return null;
-  }
-
-  const nextLink = link.split(',').find(s => s.indexOf('rel="next"') > -1);
-  if (!nextLink) {
-    return null;
-  }
-
-  return nextLink.split(';')[0].slice(1, -1);
-}
-
 
 // A Redux middleware that interprets actions with CALL_API info specified.
 // Performs the call and promises when such actions are dispatched.
