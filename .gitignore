@@ -19,3 +19,5 @@
 frontend/dest
 frontend/node_modules
 
+backend/tmp/
+
