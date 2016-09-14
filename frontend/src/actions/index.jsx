@@ -1,6 +1,6 @@
 /* eslint import/no-unresolved: 0, no-prototype-builtins: 0 */
 
-import { CALL_API, Schemas } from '../middleware/api';
+import { CALL_API, Schemas } from '../middleware/github-api';
 
 export const USER_REQUEST = 'USER_REQUEST';
 export const USER_SUCCESS = 'USER_SUCCESS';
