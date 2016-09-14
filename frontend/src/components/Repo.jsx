@@ -1,3 +1,5 @@
+/* eslint react/prefer-stateless-function: 0 */
+
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 

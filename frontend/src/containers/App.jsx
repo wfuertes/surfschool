@@ -29,12 +29,13 @@ class App extends Component {
       return null;
     }
 
+    /* eslint jsx-a11y/href-no-hash: 0 */
     return (
       <p style={{ backgroundColor: '#e99', padding: 10 }}>
         <b>{errorMessage}</b>
         {' '}
         (<a href="#"
-            onClick={this.handleDismissClick}>
+          onClick={this.handleDismissClick}>
           Dismiss
         </a>)
       </p>
@@ -46,7 +47,7 @@ class App extends Component {
     return (
       <div>
         <Explore value={inputValue}
-                 onChange={this.handleChange} />
+          onChange={this.handleChange} />
         <hr />
         {this.renderErrorMessage()}
         {children}

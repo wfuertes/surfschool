@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb-base",
+  "extends": "airbnb",
   "settings": {
     "react": {
       "createClass": "createClass",
@@ -23,8 +23,11 @@
       "error",
       140
     ],
+    "react/require-extension": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-closing-bracket-location": 0,
     "comma-dangle": [
       "error",
       "never"

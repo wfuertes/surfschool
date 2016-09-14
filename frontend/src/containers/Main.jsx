@@ -44,7 +44,7 @@ class Main extends Component {
 
   render() {
     const standardActions = (
-      <FlatButton label="Ok" primary={true} onTouchTap={this.handleRequestClose} />
+      <FlatButton label="Ok" primary onTouchTap={this.handleRequestClose} />
     );
 
     return (

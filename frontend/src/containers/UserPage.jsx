@@ -40,8 +40,8 @@ class UserPage extends Component {
   renderRepo([repo, owner]) {
     return (
       <Repo repo={repo}
-            owner={owner}
-            key={repo.fullName} />
+        owner={owner}
+        key={repo.fullName} />
     );
   }
 
@@ -57,10 +57,10 @@ class UserPage extends Component {
         <User user={user} />
         <hr />
         <List renderItem={this.renderRepo}
-              items={zip(starredRepos, starredRepoOwners)}
-              onLoadMoreClick={this.handleLoadMoreClick}
-              loadingLabel={`Loading ${login}'s starred...`}
-              {...starredPagination} />
+          items={zip(starredRepos, starredRepoOwners)}
+          onLoadMoreClick={this.handleLoadMoreClick}
+          loadingLabel={`Loading ${login}'s starred...`}
+          {...starredPagination} />
       </div>
     );
   }

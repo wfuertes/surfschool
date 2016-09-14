@@ -5,8 +5,8 @@ export default class List extends Component {
     const { isFetching, onLoadMoreClick } = this.props;
     return (
       <button style={{ fontSize: '150%' }}
-              onClick={onLoadMoreClick}
-              disabled={isFetching}>
+        onClick={onLoadMoreClick}
+        disabled={isFetching}>
         {isFetching ? 'Loading...' : 'Load More'}
       </button>
     );

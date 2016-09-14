@@ -38,7 +38,7 @@ class RepoPage extends Component {
   renderUser(user) {
     return (
       <User user={user}
-            key={user.login} />
+        key={user.login} />
     );
   }
 
@@ -52,13 +52,13 @@ class RepoPage extends Component {
     return (
       <div>
         <Repo repo={repo}
-                    owner={owner} />
+          owner={owner} />
         <hr />
         <List renderItem={this.renderUser}
-              items={stargazers}
-              onLoadMoreClick={this.handleLoadMoreClick}
-              loadingLabel={`Loading stargazers of ${name}...`}
-              {...stargazersPagination} />
+          items={stargazers}
+          onLoadMoreClick={this.handleLoadMoreClick}
+          loadingLabel={`Loading stargazers of ${name}...`}
+          {...stargazersPagination} />
       </div>
     );
   }

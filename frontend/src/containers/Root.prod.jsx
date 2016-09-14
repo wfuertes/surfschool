@@ -8,6 +8,7 @@ import routes from '../routes';
 
 import Main from './Main';
 
+/* eslint react/prefer-stateless-function: 0 */
 export default class Root extends Component {
   render() {
     const { store, history } = this.props;

@@ -1,6 +1,7 @@
 {
-  "extends": "airbnb-base",
+  "extends": "airbnb",
   "rules": {
+    "react/require-extension": "off",
     "comma-dangle": [
       "error",
       "never"
